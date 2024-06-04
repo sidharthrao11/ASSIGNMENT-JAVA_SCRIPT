@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(57, 57, 57);
+        }
+.slider {
+  width: 400px;
+  overflow: hidden;
+  margin-left: 550px;
+  margin-top: 260px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide1 {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(229, 55, 55);
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide2 {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  background-color:rgb(192, 192, 74);
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide3 {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(94, 218, 94);
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide4 {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  background-color: plum;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide5 {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  background-color:skyblue;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide6 {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  background-color: turquoise;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading{
+    text-align: center;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <h1 class="heading">Simple JavaScript Slider</h1>
+    <div class="slider">
+        <div class="slides">
+          <div class="slide1"></div>
+          <div class="slide2"></div>
+          <div class="slide3"></div>
+          <div class="slide4"></div>
+          <div class="slide5"></div>
+          <div class="slide6"></div>
+          <!-- Add more slides as needed -->
+        </div>
+      </div>
+      
+      <script>
+            document.addEventListener("DOMContentLoaded", function() {
+  const slides = document.querySelector('.slides');
+  const slideWidth = document.querySelector('.slide1').offsetWidth;
+  let slideIndex = 0;
+
+  function slide1() {
+    slideIndex++;
+    if (slideIndex >= slides.children.length) {
+      slideIndex = 0;
+    }
+    slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+  }
+
+  setInterval(slide1, 2000); // Change slide every 2 seconds
+});
+      </script>
+</body>
+</html>

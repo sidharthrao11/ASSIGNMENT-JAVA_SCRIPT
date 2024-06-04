@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Marksheet</title>
+    <style>
+        body{
+            border: 1px solid black;
+            padding: 50px;
+        }
+        table {
+            width: 50%;
+            margin: 20px auto;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2{
+            text-align: center;
+        }
+        .entermarks{
+            margin-left: 800px;
+            font-size: 20px;
+        }
+        .btn{
+            margin-left: 840px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Marksheet for information technology</h2>
+    <p class="entermarks">Enter Marks</p>
+    <table>
+        <tr>
+            
+        </tr>
+        <tr>
+            <td>1. C Languge</td>
+            <td><input type="number" id="cmarks"></td>
+        </tr>
+        <tr>
+            <td>2. Cpp Languge</td>
+            <td><input type="number" id="cppmarks"></td>
+        </tr>
+        <tr>
+            <td>3. Database</td>
+            <td><input type="number" id="dbmarks"></td>
+        </tr>
+        <tr>
+            <td>4. HTML</td>
+            <td><input type="number" id="htmlmarks"></td>
+        </tr>
+        <tr>
+            <td>5. CSS</td>
+            <td><input type="number" id="cssmarks"></td>
+        </tr>
+        <tr>
+            <td>6. php</td>
+            <td><input type="number" id="phpmarks"></td>
+        </tr>
+        <tr>
+            <td>7. CoreJava</td>
+            <td><input type="number" id="cjmarks"></td>
+        </tr>
+    </table>
+    <button class="btn" onclick="calculateResult()"> Result</button>
+    <div id="result"></div>
+
+    <script>
+        function calculateResult() {
+            var CLanguge = parseFloat(document.getElementById('cmarks').value);
+            var CppLanguge = parseFloat(document.getElementById('cppmarks').value);
+            var DataBase = parseFloat(document.getElementById('dbmarks').value);
+            var HTML = parseFloat(document.getElementById('htmlmarks').value);
+            var CSS = parseFloat(document.getElementById('cssmarks').value);
+            var php = parseFloat(document.getElementById('phpmarks').value);
+            var CoreJava = parseFloat(document.getElementById('cjmarks').value);
+
+            var totalMarks = CLanguge + CppLanguge + DataBase + HTML + CSS + php + CoreJava ;
+            var average = totalMarks / 7;
+            var result = '';
+
+            if (average >= 60) {
+                result = 'Pass';
+            } else {
+                result = 'Fail';
+            }
+
+            document.getElementById('result').innerHTML = '<h3>Total Marks: ' + totalMarks + '</h3>' +
+                                                            '<h3>Average Marks: ' + average.toFixed(2) + '</h3>' +
+                                                            '<h3>Result: ' + result + '</h3>';
+        }
+    </script>
+</body>
+</html>

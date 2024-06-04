@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment JS</title>
+    <style>
+        .heading{
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: black;
+            padding: 20px;
+            color:rgb(243, 243, 145);
+            text-align: center;
+        }
+        .A{
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: cornflowerblue;
+            padding: 10px;
+            color: white;
+        }
+        .B{
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: wheat;
+            padding: 10px;
+        }
+        .calc{
+            width: 30%;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading"> JAVASCRIPT ASSIGNMENT</h1>
+<div class="A">
+    Q. 1 What is JavaScript? <br>
+    Ans :- JavaScript is event based, scripting or programming languge which allows to implement <br>
+    some features on the web page, and its dynamically typed languge which means we dont need to <br>
+    declair the varibale type before we declair it. and also can change the value at a runtime. <br>
+</div> 
+
+    
+
+<div class="B">
+    Q. 2 What is the use of isNaN function? <br>
+    Ans :- to identify that given number is illegale or not we use isNan function/method. <br>
+    if given number's value is illegale than it'll give true output, else it'll give us <br>
+    false output. <br>
+</div>
+
+        
+<div class="A">
+    Q. 3  What is negative Infinity?
+    Ans :- Negative Infinity is the value JS will return if you calculate a number outside the largest possible number. <br>
+           exo :- x = -2/0 ; <br> 
+                  console.log(x); <br>
+                  <br>
+                  output = -infinity; <br>
+</div>
+
+
+<div class="B">
+    Q. 4 Which company developed JavaScript? <br>
+    Ans :- JavaScript was created at Netscape Communications by Brendan Eich in 1995. Netscape and Eich designed JavaScript <br>
+    as a scripting language for use with the company's flagship web browser, Netscape Navigator. <br>
+
+</div>
+
+<div class="A">
+    Q. 5  What are undeclared and undefined variables? <br>
+    Ans :- Undefined -> It occurs when a variable has been declared but has not been assigned any value. <br>
+                        Undefined is not a keyword. <br>
+           Undeclared: It occurs when we try to access any variable that is not initialized or declared earlier using the var or const keyword. <br>
+</div>
+                  
+<div class="B">
+    Q. 6 Write the code for adding new elements dynamically? <br>
+    Ans :- The createElement() method in JavaScript can be used to create new items dynamically. <br>
+    The setAttribute() method is used to set the attributes of the newly generated element. <br>
+    By clicking a button, a modal box appears and collects the required information dynamically. <br>
+    The collected dynamic data is displayed in the alert box and browser. <br>
+    EXP :-  (Code) 
+    
+    <div class="button"> 
+        <button id="addTask">Add task</button> 
+    </div> 
+    <div class="tasks"></div> 
+    <script type="text/javascript"> 
+  
+        // Getting the parent element in which 
+        // the new div will be created 
+        let task = document.getElementsByClassName("tasks"); 
+  
+        // Getting the addTask button element 
+        let addTask = document.getElementById("addTask"); 
+          
+        // Adding onclick event to the button 
+        addTask.addEventListener('click', function () { 
+      
+            // Traversing through collection of HTML 
+            // elements (tasks here) 
+            for (let i = 0; i < task.length; i++) { 
+                  
+                // New div element is created   
+                let newDiv = document.createElement("div"); 
+                      
+                // Setting the attribute of class type to newDiv  
+                newDiv.setAttribute("class", "list"); 
+                     
+                // innerText used to write the text in newDiv  
+                newDiv.innerText = "New Div created"; 
+                       
+                // Finally append the newDiv to the 
+                // parent i.e. tasks    
+                task[i].append(newDiv); 
+            } 
+        }) 
+    </script> 
+</div>
+
+<div class="A">
+    Q. 7  What is the difference between ViewState and SessionState?<br>
+    Ans :- Storage The Viewstate is stored within the page itself (in encrypted text), <br>
+     while the Sessionstate is stored in the server. Session is used mainly for storing user  <br>
+     specific data (session specific data ). <br>
+
+</div>
+<div class="B">
+    Q.8  What is === operator? <br>
+    Ans :- In JavaScript, === is a comparison operator that checks the equality of two values without performing <br>
+     any type conversion. This means that if the values being compared have different data types, === will return false . <br>
+      For example: javascript. log(7 === 7); // true console. <br>
+</div>
+
+<div class="A">
+    Q. 9 How can the style/class of an element be changed? <br>
+    Ans :- The document. getElementById() method is used to return the element in the document <br>
+     with the “id” attribute and the “className” attribute can be used to change the class of the element. <br>
+</div>
+
+<div class="B">
+    Q. 10 How to read and write a file using JavaScript? <br>
+    Ans :- readFile() and rs. writeFile() methods are used to read and write of a file using javascript. <br>
+    The file is read using the fs. readFile() function, which is an inbuilt method. <br>
+</div>
+
+<div class="A">
+    Q. 11 What are all the looping structures in JavaScript? <br>
+    Ans :- there are following looping structure is in JS :- <br>
+    1.for statement          <br>
+    2.do...while statement   <br>
+    3.while statement        <br>
+    4.labeled statement      <br>
+    5.break statement        <br>
+    6.continue statement     <br>
+    7.for...in statement     <br>
+    8.for...of statement     <br>
+</div>
+
+<div class="B">
+    Q. 12 How can you convert the string of any base to an integer in JavaScript?<br>
+    Ans :- Using parseInt() <br>
+    It stops at the n character, and treats the preceding string as a normal integer, <br>
+    with possible loss of precision. You should pass the string to the BigInt() function instead, <br>
+     without the trailing n character. <br>
+</div>
+
+<div class="A">
+    Q. 13 What is the function of the delete operator? <br>
+    Ans:- The delete operator removes a property from an object. <br>
+      If the property's value is an object and there are no more references to the object, <br>
+      the object held by that property is eventually released automatically. <br>
+</div>
+
+<div class="B">
+    Q. 14 What are all the types of Pop up boxes available in JavaScript? <br>
+    Ans:- JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box. <br>
+</div>
+
+<div class="A">
+    Q. 15 What is the use of Void (0)? <br>
+    Ans:- The void operator is often used merely to obtain the undefined primitive value, <br>
+     usually using void(0) (which is equivalent to void 0 ). In these cases, the global variable undefined can be used. <br>
+</div>
+
+<div class="B">
+    Q. 16 How can a page be forced to load another page in JavaScript? <br>
+    Ans: - The open() method of the Window interface loads a specified resource into a new or existing browsing context <br>
+     (that is, a tab, a window, or an iframe) under a specified name. <br>
+     open() <br>
+     open(url) <br>
+     open(url,target) <br>
+</div>
+
+<div class="A">
+    Q. 17 What are the disadvantages of using innerHTML in JavaScript? <br>
+    Ans :- Please note that using innerHTML to append HTML elements (e.g. el. innerHTML += "&lt;a href='…'link&lt;/a&gt;" ) will result in <br>
+     the removal of any previously set event listeners. That is, after you append any HTML element that way you won't be able to listen to the <br>
+     previously set event listeners. <br>
+      <br>
+      It is very slow because as inner HTML already parses the content even we have to parse the content again so that's why it takes time. <br>
+       When we have used the event handlers then the event handlers are not automatically attached to the new elements created by innerHTML. <br>
+</div>
+
+<div class="B">
+    Q. 18 Create password field with show hide functionalities. <br>
+    Ans :-
+    <div class="box">
+        <br><br>
+        <label for="">Enter Password</label>
+        <input type="password" name="" id="show">
+        <br><br>
+        <label for="">show Password</label>
+        <input type="checkbox" name="">
+        <br> <br>
+
+    </div>
+
+    <script type="text/javascript">
+         function myFunction (){
+            var show = document.getElementById('show');
+            if(show.type=='password'){
+                show.type=='text';
+            }
+            else{
+                show.type='password';
+            }
+         }
+    </script>
+</div>
+
+<div class="A">
+    Q.19 Create basic math operation in JS. <br>
+    <img class="calc" src="../ASSIGNMENT-JAVA_SCRIPT/img/q.19.png" alt=""> <br>
+    Ans:-  [ NOTE:- THE ANSWER IS GIVEN IN THE FOLDER Quetion19 in the FOLDER ASSIGNMENT-JAVA_SCRIPT.] <br>
+ </div>
+
+ <div class="B">
+    Q. 20 
+ </div>
+
+</body>
+</html>
